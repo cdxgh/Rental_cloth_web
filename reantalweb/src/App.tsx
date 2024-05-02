@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import  Home  from "./pages/home";
-import  Search from "./pages/search";
-import Cart from "./pages/Cart";
+import { lazy } from "react";
+const  Home = lazy (()=>import("./pages/home"));
+const Search= lazy (()=>import("./pages/search"));
+const Cart = lazy (()=>import("./pages/Cart"));
 const App = ()=>{
   return(
     <Router>
