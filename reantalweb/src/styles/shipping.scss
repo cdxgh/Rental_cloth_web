@@ -1,4 +1,15 @@
-.shipping {
+// Define the btn mixin
+@mixin btn($size, $background-color, $color) {
+    width: $size;
+    height: $size;
+    background-color: $background-color;
+    color: $color;
+    border: none; // Add more styles as needed
+  }
+  
+  // Import any necessary variables or mixins here
+  
+  .shipping {
     @include flex;
   
     .back-btn {
@@ -20,7 +31,7 @@
       }
   
       &:hover svg {
-        translate: -0.25rem;
+        transform: translateY(-0.25rem); // Corrected typo from 'translate' to 'transform'
       }
     }
   
